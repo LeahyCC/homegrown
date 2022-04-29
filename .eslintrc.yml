@@ -13,6 +13,7 @@ extends:
   - plugin:jsx-a11y/recommended
   - plugin:security/recommended
   - plugin:prettier/recommended
+  - prettier
 parser: '@typescript-eslint/parser'
 parserOptions:
   project:
