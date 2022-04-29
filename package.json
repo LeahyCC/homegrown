@@ -42,6 +42,11 @@
     "vite": "^2.9.5"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "**/*.{ts,jsx,js}?(x)": [
+      "eslint -c .eslintrc.yml --fix"
+    ],
+    "*": [
+      "prettier --ignore-unknown --write"
+    ]
   }
 }
