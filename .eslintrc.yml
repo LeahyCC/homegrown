@@ -130,7 +130,7 @@ rules:
   no-var:
     - warn
   prefer-arrow/prefer-arrow-functions:
-    - warn
+    - error
   prefer-object-spread:
     - 'off'
   prefer-template:

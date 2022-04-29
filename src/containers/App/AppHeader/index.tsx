@@ -3,7 +3,7 @@ const AppHeader = () => {
 
   return (
     <div className="page-header__wrapper">
-      <h1>Super Awesome App! {x}</h1>
+      <h1>Super Awesome App header! {x}</h1>
     </div>
   )
 }
