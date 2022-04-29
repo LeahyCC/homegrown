@@ -1,4 +1,6 @@
 const App = () => {
+  const test = true
+
   return (
     <div className="App">
       <header className="App-header">header</header>
