@@ -1,0 +1,541 @@
+settings:
+  react:
+    version: detect
+env:
+  browser: true
+  node: true
+  es2021: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:react/jsx-runtime
+  - plugin:@typescript-eslint/recommended
+  - plugin:jsx-a11y/recommended
+  - plugin:security/recommended
+  - plugin:prettier/recommended
+parser: '@typescript-eslint/parser'
+parserOptions:
+  project:
+    - ./tsconfig.json
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: latest
+  sourceType: module
+plugins:
+  - react
+  - node
+  - promise
+  - '@typescript-eslint'
+  - prefer-arrow
+  - jsdoc
+  - prettier
+  - standard
+  - import
+ignorePatterns:
+  - src/__tests__/*
+rules:
+  node/handle-callback-err:
+    - warn
+    - '^(err|error)$'
+  security/detect-object-injection:
+    - 'off'
+  no-warning-comments:
+    - warn
+  no-restricted-properties:
+    - warn
+    - object: document
+      property: domain
+    - object: document
+      property: write
+    - object: window
+      property: setImmediate
+  arrow-body-style:
+    - 'off'
+  camelcase:
+    - 'off'
+  class-methods-use-this:
+    - 'off'
+  default-case:
+    - 'off'
+  guard-for-in:
+    - warn
+  id-blacklist:
+    - warn
+    - any
+    - Number
+    - number
+    - String
+    - string
+    - Boolean
+    - boolean
+    - Undefined
+    - undefined
+  id-match:
+    - warn
+  import/no-default-export:
+    - 'off'
+  import/no-deprecated:
+    - 'off'
+  import/no-extraneous-dependencies:
+    - warn
+  import/no-internal-modules:
+    - 'off'
+  import/no-unassigned-import:
+    - 'off'
+  import/order:
+    - 'off'
+  jsdoc/check-alignment:
+    - warn
+  jsdoc/check-indentation:
+    - warn
+  jsdoc/newline-after-description:
+    - warn
+  jsdoc/no-types:
+    - warn
+  linebreak-style:
+    - 'off'
+  max-classes-per-file:
+    - 'off'
+  max-len:
+    - 'off'
+  max-lines:
+    - 'off'
+  newline-per-chained-call:
+    - 'off'
+  no-console:
+    - 'warn'
+  no-duplicate-imports:
+    - warn
+  no-empty:
+    - warn
+  no-invalid-this:
+    - 'off'
+  no-magic-numbers:
+    - 'off'
+  no-multiple-empty-lines:
+    - warn
+  no-null/no-null:
+    - 'off'
+  no-restricted-imports:
+    - 'off'
+  no-restricted-syntax:
+    - warn
+    - ForInStatement
+  no-shadow:
+    - warn
+    - hoist: all
+  no-underscore-dangle:
+    - 'off'
+  no-var:
+    - warn
+  prefer-arrow/prefer-arrow-functions:
+    - warn
+  prefer-object-spread:
+    - 'off'
+  prefer-template:
+    - 'off'
+  radix:
+    - warn
+  no-undef:
+    - 'off'
+  accessor-pairs:
+    - warn
+  constructor-super:
+    - warn
+  dot-location:
+    - warn
+    - property
+  eol-last:
+    - warn
+  eqeqeq:
+    - warn
+    - smart
+  handle-callback-err:
+    - warn
+    - '^(err|error)$'
+  new-cap:
+    - warn
+    - newIsCap: true
+      capIsNew: false
+      properties: true
+  new-parens:
+    - warn
+  no-async-promise-executor:
+    - warn
+  no-caller:
+    - warn
+  no-case-declarations:
+    - warn
+  no-class-assign:
+    - warn
+  no-compare-neg-zero:
+    - warn
+  no-cond-assign:
+    - warn
+  no-const-assign:
+    - warn
+  no-constant-condition:
+    - warn
+  no-control-regex:
+    - warn
+  no-debugger:
+    - warn
+  no-delete-var:
+    - warn
+  no-dupe-args:
+    - warn
+  no-dupe-keys:
+    - warn
+  no-duplicate-case:
+    - warn
+  no-empty-character-class:
+    - warn
+  no-empty-pattern:
+    - warn
+  no-eval:
+    - warn
+  no-ex-assign:
+    - warn
+  no-extend-native:
+    - warn
+  no-extra-bind:
+    - warn
+  no-extra-boolean-cast:
+    - warn
+  no-extra-parens:
+    - warn
+    - functions
+  no-fallthrough:
+    - warn
+  no-floating-decimal:
+    - warn
+  no-func-assign:
+    - warn
+  no-global-assign:
+    - warn
+  no-inner-declarations:
+    - warn
+  no-invalid-regexp:
+    - warn
+  no-irregular-whitespace:
+    - warn
+  no-iterator:
+    - warn
+  no-labels:
+    - warn
+    - allowLoop: false
+      allowSwitch: false
+  no-lone-blocks:
+    - warn
+  no-misleading-character-class:
+    - warn
+  no-prototype-builtins:
+    - warn
+  no-useless-catch:
+    - warn
+  no-mixed-operators:
+    - warn
+    - groups:
+        - - '=='
+          - '!='
+          - '==='
+          - '!=='
+          - '>'
+          - '>='
+          - '<'
+          - '<='
+        - - '&&'
+          - '||'
+        - - in
+          - instanceof
+      allowSamePrecedence: true
+  no-multi-str:
+    - 'off'
+  no-negated-in-lhs:
+    - warn
+  no-new:
+    - warn
+  no-new-func:
+    - warn
+  no-new-object:
+    - warn
+  no-new-require:
+    - warn
+  no-new-symbol:
+    - warn
+  no-new-wrappers:
+    - warn
+  no-obj-calls:
+    - warn
+  no-octal:
+    - warn
+  no-octal-escape:
+    - warn
+  no-path-concat:
+    - warn
+  no-proto:
+    - warn
+  no-redeclare:
+    - warn
+  no-regex-spaces:
+    - warn
+  no-return-assign:
+    - warn
+    - except-parens
+  no-self-assign:
+    - warn
+    - props: true
+  no-self-compare:
+    - warn
+  no-sequences:
+    - warn
+  no-shadow-restricted-names:
+    - warn
+  no-sparse-arrays:
+    - warn
+  no-template-curly-in-string:
+    - warn
+  no-this-before-super:
+    - warn
+  no-trailing-spaces:
+    - warn
+  no-undef-init:
+    - warn
+  no-unexpected-multiline:
+    - warn
+  no-unmodified-loop-condition:
+    - warn
+  no-unreachable:
+    - warn
+  no-unsafe-finally:
+    - warn
+  no-unsafe-negation:
+    - warn
+  no-useless-call:
+    - warn
+  no-useless-computed-key:
+    - warn
+  no-useless-escape:
+    - warn
+  no-useless-rename:
+    - warn
+  no-void:
+    - 'off'
+  no-whitespace-before-property:
+    - warn
+  no-with:
+    - warn
+  object-curly-newline:
+    - warn
+    - multiline: true
+      consistent: true
+  one-var:
+    - warn
+    - never
+  operator-linebreak:
+    - warn
+    - after
+    - overrides:
+        '?': before
+        ':': before
+        '|>': before
+  prefer-promise-reject-errors:
+    - warn
+  rest-spread-spacing:
+    - warn
+    - never
+  symbol-description:
+    - warn
+  unicode-bom:
+    - warn
+    - never
+  valid-typeof:
+    - warn
+  wrap-iife:
+    - warn
+    - any
+    - functionPrototypeMethods: true
+  yoda:
+    - warn
+  import/export:
+    - warn
+  import/first:
+    - warn
+  import/no-absolute-path:
+    - warn
+    - esmodule: true
+      commonjs: true
+      amd: false
+  import/no-duplicates:
+    - warn
+  import/no-named-default:
+    - warn
+  import/no-webpack-loader-syntax:
+    - warn
+  node/no-deprecated-api:
+    - warn
+  node/process-exit-as-throw:
+    - warn
+  promise/param-names:
+    - warn
+  standard/no-callback-literal:
+    - warn
+  '@typescript-eslint/ban-types':
+    - warn
+  no-empty-function:
+    - 'off'
+  '@typescript-eslint/no-empty-function':
+    - warn
+  '@typescript-eslint/no-require-imports':
+    - warn
+  '@typescript-eslint/no-unnecessary-qualifier':
+    - warn
+  '@typescript-eslint/prefer-namespace-keyword':
+    - warn
+  '@typescript-eslint/unified-signatures':
+    - warn
+  '@typescript-eslint/no-unnecessary-condition':
+    - warn
+    - allowConstantLoopConditions: true
+  dot-notation:
+    - 'off'
+    - allowKeywords: true
+      allowPattern: ''
+  '@typescript-eslint/dot-notation':
+    - warn
+  '@typescript-eslint/no-dupe-class-members':
+    - warn
+  '@typescript-eslint/no-throw-literal':
+    - warn
+  no-unused-expressions:
+    - 'off'
+  '@typescript-eslint/no-unused-expressions':
+    - warn
+    - allowTaggedTemplates: true
+      allowShortCircuit: true
+  no-useless-constructor:
+    - 'off'
+  '@typescript-eslint/no-useless-constructor':
+    - warn
+  no-use-before-define:
+    - 'off'
+    - functions: false
+      classes: false
+      variables: false
+  '@typescript-eslint/no-use-before-define':
+    - warn
+  '@typescript-eslint/array-type':
+    - warn
+    - default: array
+  default-param-last:
+    - 'off'
+  '@typescript-eslint/default-param-last':
+    - warn
+  '@typescript-eslint/method-signature-style':
+    - warn
+    - method
+  '@typescript-eslint/no-base-to-string':
+    - warn
+  '@typescript-eslint/no-dynamic-delete':
+    - warn
+  '@typescript-eslint/no-empty-interface':
+    - warn
+  '@typescript-eslint/no-extra-non-null-assertion':
+    - warn
+  '@typescript-eslint/no-extraneous-class':
+    - warn
+  '@typescript-eslint/no-floating-promises':
+    - warn
+    - ignoreVoid: true
+  '@typescript-eslint/no-for-in-array':
+    - warn
+  no-implied-eval:
+    - 'off'
+  '@typescript-eslint/no-implied-eval':
+    - warn
+  '@typescript-eslint/no-invalid-void-type':
+    - warn
+  '@typescript-eslint/no-misused-new':
+    - warn
+  '@typescript-eslint/no-misused-promises':
+    - warn
+    - checksVoidReturn: false
+  '@typescript-eslint/no-non-null-asserted-optional-chain':
+    - warn
+  '@typescript-eslint/no-this-alias':
+    - warn
+  '@typescript-eslint/no-unnecessary-type-assertion':
+    - warn
+  '@typescript-eslint/no-var-requires':
+    - warn
+  '@typescript-eslint/prefer-function-type':
+    - warn
+  '@typescript-eslint/prefer-includes':
+    - warn
+  '@typescript-eslint/prefer-nullish-coalescing':
+    - warn
+    - ignoreConditionalTests: false
+      ignoreMixedLogicalExpressions: false
+  '@typescript-eslint/prefer-reduce-type-parameter':
+    - warn
+  '@typescript-eslint/prefer-ts-expect-error':
+    - warn
+  '@typescript-eslint/triple-slash-reference':
+    - warn
+    - path: always
+      types: prefer-import
+      lib: always
+  jsx-a11y/no-redundant-roles:
+    - 'off'
+  jsx-a11y/anchor-is-valid:
+    - 'off'
+  react/no-danger-with-children:
+    - warn
+  react/no-danger:
+    - warn
+  react/no-unused-state:
+    - warn
+  react/jsx-no-bind:
+    - 'off'
+  react/jsx-no-target-blank:
+    - warn
+  react/jsx-boolean-value:
+    - 'off'
+  react/jsx-key:
+    - warn
+  complexity:
+    - warn
+  no-return-await:
+    - 'off'
+  '@typescript-eslint/return-await':
+    - warn
+    - always
+  no-bitwise:
+    - error
+  no-throw-literal:
+    - error
+  object-shorthand:
+    - error
+  prefer-const:
+    - error
+  no-useless-return:
+    - error
+  no-unused-labels:
+    - error
+  use-isnan:
+    - error
+  no-unneeded-ternary:
+    - error
+    - defaultAssignment: false
+  no-implicit-coercion:
+    - error
+  no-array-constructor:
+    - 'off'
+  '@typescript-eslint/no-array-constructor':
+    - error
+  no-unused-vars:
+    - 'error'
+  '@typescript-eslint/no-unused-vars':
+    - error
+    - argsIgnorePattern: '^_'
+      ignoreRestSiblings: true
