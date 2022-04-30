@@ -1,13 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
-import AppHeader from './containers/App/AppHeader'
-import AppNavigation from './containers/App/AppNavigation'
+import AppNavigation from './containers/AppNavigation'
 import Home from './containers/Home'
 import About from './containers/About'
 
 const App = () => {
   return (
     <div className="App">
-      <AppHeader />
       <AppNavigation />
       <div>
         <Routes>

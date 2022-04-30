@@ -2,9 +2,9 @@
 // auto-generated based on the defined endpoints
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { pokemonApi } from './services/pokemon'
 
-export const { useGetPokemonByNameQuery } = pokemonApi
+// API Services
+import { pokemonApi } from './services/pokemon'
 
 export const store = configureStore({
   reducer: {

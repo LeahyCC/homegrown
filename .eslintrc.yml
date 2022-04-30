@@ -456,6 +456,7 @@ rules:
     - warn
   '@typescript-eslint/no-invalid-void-type':
     - warn
+    # - allowInGenericTypeArguments: false not working
   '@typescript-eslint/no-misused-new':
     - warn
   '@typescript-eslint/no-misused-promises':
@@ -463,6 +464,8 @@ rules:
     - checksVoidReturn: false
   '@typescript-eslint/no-non-null-asserted-optional-chain':
     - warn
+  '@typescript-eslint/no-non-null-assertion':
+    - 'off'
   '@typescript-eslint/no-this-alias':
     - warn
   '@typescript-eslint/no-unnecessary-type-assertion':

@@ -1,13 +1,10 @@
-import { Link } from 'react-router-dom'
+import InnerPageContainer from '../../components/InnerPageWrapper'
 
 const About = () => {
   return (
-    <div className="page-header__wrapper">
-      Home page!
-      <div>
-        <Link to="/">Home</Link>
-      </div>
-    </div>
+    <InnerPageContainer>
+      <div className="page-header__wrapper">About page!</div>
+    </InnerPageContainer>
   )
 }
 
