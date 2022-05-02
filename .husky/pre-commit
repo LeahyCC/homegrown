@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn run stylelint-check
+# yarn run stylelint-check
 npx lint-staged

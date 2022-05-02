@@ -12,8 +12,8 @@ export const pokemonApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://pokeapi.co/api/v2/' }),
   endpoints: (builder) => ({
     // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-    getAllPokemon: builder.query<PokemonGetType, void>({
-      query: () => `pokemon`,
+    getAllPokemon: builder.query<PokemonGetType, number | void>({
+      query: (offSet = 0) => `pokemon?offset=${offSet}&limit=${18}`,
     }),
     getPokemonByName: builder.query({
       query: (name) => `pokemon/${name}`,
