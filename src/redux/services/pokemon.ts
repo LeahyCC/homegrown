@@ -3,10 +3,14 @@ import api from './index'
 type PokemonGetType = {
   next: string
   previous: string
-  results: { name: string; url: string; id: number; imageUrl: string }[]
+  results: {
+    name: string
+    url: string
+    id: number
+    imageUrl: string
+    animatedImageUrl: string
+  }[]
 }
-
-const API_GET_LIST_LIMIT = 6
 
 /**
  * docs - https://github.com/sashafirsov/pokeapi-sprites
@@ -21,33 +25,43 @@ const API_GET_LIST_LIMIT = 6
 
 export const pokemonApi = api.injectEndpoints({
   endpoints: (builder) => ({
-    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-    getPokemonList: builder.query<PokemonGetType, number | void>({
-      query: (offSet = 0) =>
-        `pokemon?offset=${offSet}&limit=${API_GET_LIST_LIMIT}`,
+    getPokemonList: builder.query<
+      PokemonGetType,
+      { offSet: number; limit: number }
+    >({
+      query: (arg) => {
+        const { offSet, limit } = arg
+        return {
+          url: `pokemon?offset=${offSet}&limit=${limit}`,
+        }
+      },
       transformResponse: (response: PokemonGetType) => {
         return {
           next: response.next,
           previous: response.previous,
           results: response.results.map((poke) => {
             const pokemonId = Number(poke.url.split(`/`)[6])
+            const baseImageUrl =
+              'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
             const pokemonImageUrl = (pokeID: number) =>
-              `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeID}.svg`
-
+              `${baseImageUrl}other/dream-world/${pokeID}.svg`
+            const pokemonAnimatedImageUrl = (pokeID: number) =>
+              `${baseImageUrl}versions/generation-v/black-white/animated/${pokeID}.gif`
             return {
               name: poke.name,
               url: poke.url,
               id: pokemonId,
               imageUrl: pokemonImageUrl(pokemonId),
+              animatedImageUrl: pokemonAnimatedImageUrl(pokemonId),
             }
           }),
         }
       },
     }),
-    getPokemonByName: builder.query({
-      query: (name) => `pokemon/${name}`,
+    getPokemonById: builder.query({
+      query: (id) => `pokemon/${id}`,
     }),
   }),
 })
 
-export const { useGetPokemonByNameQuery, useGetPokemonListQuery } = pokemonApi
+export const { useGetPokemonByIdQuery, useGetPokemonListQuery } = pokemonApi
