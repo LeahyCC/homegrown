@@ -54,7 +54,6 @@
     "**/*.{js,jsx,ts,tsx}?(x)": [
       "eslint -c .eslintrc.yml --fix"
     ],
-    "**/*.{js,jsx,ts,tsx,md,html,css,scss}": "prettier --write",
-    "**/*{.css,scss,sass,less}": "stylelint --fix"
+    "**/*.{js,jsx,ts,tsx,md,html,css,scss}": "prettier --write"
   }
 }

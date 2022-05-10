@@ -4,9 +4,8 @@
     top: 0;
     left: 0;
     bottom: 0;
-    max-width: 50px;
-    width: 100%;
-    background-color: #233034;
+    width: 50px;
+    background-color: #084c61;
   }
 
   &__logo {
@@ -15,7 +14,7 @@
     align-items: center;
     padding: 8px 0;
     margin-bottom: 10px;
-    background-color: #00bfff;
+    background-color: #56a3a6;
     color: white;
 
     > * {
@@ -38,7 +37,7 @@
 
     &--active {
       .nav__item-icon {
-        color: #00bfff;
+        color: #e3b505;
       }
     }
 

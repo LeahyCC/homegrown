@@ -1,5 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# to add style linting uncomment below and add 'stylelint' to lint-staged in package.json
 # yarn run stylelint-check
+# "**/*{.css,scss,sass,less}": "stylelint --fix"
 npx lint-staged
