@@ -1,3 +1,3 @@
 # homegrown
 
-Away to test RTK Query limitations without any extra fluff.
+A way to test RTK Query limitations without any extra fluff.
