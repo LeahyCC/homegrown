@@ -1,6 +1,7 @@
 import api from './index'
 
 type PokemonGetType = {
+  count: number
   next: string
   previous: string
   results: {
@@ -37,6 +38,7 @@ export const pokemonApi = api.injectEndpoints({
       },
       transformResponse: (response: PokemonGetType) => {
         return {
+          count: response.count,
           next: response.next,
           previous: response.previous,
           results: response.results.map((poke) => {

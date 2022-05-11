@@ -1,5 +1,5 @@
 import InnerPageContainer from '../../components/InnerPageWrapper'
-import PokemonGenerator from './PokemonGenerator'
+import PokemonGenerator from '../../components/PokemonGenerator'
 
 const Home = () => {
   return (
