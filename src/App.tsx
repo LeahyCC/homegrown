@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import AppNavigation from './containers/AppNavigation'
-import Home from './containers/Home'
+import Pokemon from './containers/Pokemon'
 import About from './containers/About'
 import './index.scss'
 
@@ -10,8 +10,8 @@ const App = () => {
       <AppNavigation />
       <div className="App__content">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="/" element={<About />} />
+          <Route path="/pokemon" element={<Pokemon />} />
         </Routes>
       </div>
     </div>

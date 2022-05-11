@@ -1,7 +1,7 @@
 import { MdCatchingPokemon } from 'react-icons/md'
 import { HiOutlineCode } from 'react-icons/hi'
 
-import Home from '../Home'
+import Pokemon from '../Pokemon'
 import About from '../About'
 
 export type navItem = {
@@ -11,25 +11,25 @@ export type navItem = {
 }
 
 export const navURLS = {
-  home: {
-    url: '/',
-    component: Home,
-  },
   about: {
-    url: '/about',
+    url: '/',
     component: About,
+  },
+  pokemon: {
+    url: '/pokemon',
+    component: Pokemon,
   },
 }
 
 export const itemList: navItem[] = [
   {
-    to: navURLS.home.url,
-    icon: MdCatchingPokemon({ size: '100%' }),
-    title: 'Pokemon',
-  },
-  {
     to: navURLS.about.url,
     icon: HiOutlineCode({ size: '100%' }),
     title: 'About',
+  },
+  {
+    to: navURLS.pokemon.url,
+    icon: MdCatchingPokemon({ size: '100%' }),
+    title: 'Pokemon',
   },
 ]
