@@ -7,7 +7,6 @@ import './index.scss'
 const PokemonGenerator = () => {
   const [imageType, setImageType] = useState('svg')
   const [offSetNumber, setOffSetNumber] = useState(0)
-  console.log('offSetNumber', offSetNumber)
   const [limitNumber, setLimitNumber] = useState(6)
   const {
     data: pokemonList,
