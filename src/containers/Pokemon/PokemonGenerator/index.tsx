@@ -7,6 +7,7 @@ import './index.scss'
 const PokemonGenerator = () => {
   const [imageType, setImageType] = useState('svg')
   const [offSetNumber, setOffSetNumber] = useState(0)
+  console.log('offSetNumber', offSetNumber)
   const [limitNumber, setLimitNumber] = useState(6)
   const {
     data: pokemonList,
@@ -25,10 +26,10 @@ const PokemonGenerator = () => {
     return Number(offSetResult[0])
   }
 
-  const setListOffSet = (type: 'forward' | 'back') => {
-    if (type === 'forward') {
-      pokemonList?.next && setOffSetNumber(formatResponse(pokemonList.next))
-    }
+  const nextList = () => {
+    pokemonList?.next && setOffSetNumber(formatResponse(pokemonList.next))
+  }
+  const backList = () => {
     pokemonList?.previous &&
       setOffSetNumber(formatResponse(pokemonList.previous))
   }
@@ -47,8 +48,8 @@ const PokemonGenerator = () => {
       <br />
       <br />
       <div style={{ display: 'flex' }}>
-        <button onClick={() => setListOffSet('back')}>Back</button>
-        <button onClick={() => setListOffSet('forward')}>Next</button>
+        <button onClick={backList}>Back</button>
+        <button onClick={nextList}>Next</button>
       </div>
       <div>
         <input
