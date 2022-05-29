@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react'
 import InnerPageWrapper from '../../components/InnerPageWrapper'
-// import Word from './word'
+import WordsSearch from './WordsSearch'
 import words from 'an-array-of-english-words'
 
 /**
@@ -11,7 +11,8 @@ import words from 'an-array-of-english-words'
 
 const Words = () => {
   // const [wordsState] = useState<string[]>(words)
-  const [amountOfWords, setAmountOfWords] = useState(10)
+  // exceeding 5000 will cause stack to implode a bit
+  const [amountOfWords, setAmountOfWords] = useState(0)
 
   const listWrap = document.getElementById('js__list-wrapper')
   useLayoutEffect(() => {
@@ -38,10 +39,23 @@ const Words = () => {
       />
       <br />
       <br />
+      <input
+        onChange={(e) => setAmountOfWords(Number(e.target.value))}
+        type="number"
+        min="1"
+        max={words.length}
+        value={amountOfWords}
+        style={{ width: '200px' }}
+      />
+      <br />
+      <br />
+      words rendered:
+      <br />
+      <br />
       <ul
         id="js__list-wrapper"
         style={{
-          border: '1px solid grey',
+          border: '1px solid lightgrey',
           borderRadius: '5px',
           padding: 10,
           maxHeight: '200px',
@@ -53,6 +67,9 @@ const Words = () => {
           return <li key={word}>{word}</li>
         })}
       </ul>
+      <br />
+      <br />
+      <WordsSearch />
     </InnerPageWrapper>
   )
 }
