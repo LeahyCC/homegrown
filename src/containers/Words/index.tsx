@@ -1,5 +1,6 @@
 import { useLayoutEffect, useState } from 'react'
 import InnerPageWrapper from '../../components/InnerPageWrapper'
+// import Word from './word'
 import words from 'an-array-of-english-words'
 
 const Words = () => {
@@ -42,6 +43,11 @@ const Words = () => {
         }}
       >
         {wordsState.slice(0, amountOfWords).map((word) => {
+          /**
+           * only for testing rerenders
+           * whats the most prominent "bottle neck"
+           */
+          // return <Word key={word} word={word} />
           return <li key={word}>{word}</li>
         })}
       </ul>
