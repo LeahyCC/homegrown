@@ -1,8 +1,9 @@
-import { MdCatchingPokemon } from 'react-icons/md'
+import { MdCatchingPokemon, MdStickyNote2 } from 'react-icons/md'
 import { HiOutlineCode } from 'react-icons/hi'
 
-import Pokemon from '../Pokemon'
-import About from '../About'
+import Pokemon from '../../containers/Pokemon'
+import About from '../../containers/About'
+import Words from '../../containers/Words'
 
 export type navItem = {
   to: string
@@ -19,6 +20,10 @@ export const navURLS = {
     url: '/pokemon',
     component: Pokemon,
   },
+  words: {
+    url: '/words',
+    component: Words,
+  },
 }
 
 export const itemList: navItem[] = [
@@ -31,5 +36,10 @@ export const itemList: navItem[] = [
     to: navURLS.pokemon.url,
     icon: MdCatchingPokemon({ size: '100%' }),
     title: 'Pokemon',
+  },
+  {
+    to: navURLS.words.url,
+    icon: MdStickyNote2({ size: '100%' }),
+    title: 'Words',
   },
 ]

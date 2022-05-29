@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import AppNavigation from './containers/AppNavigation'
+import AppNavigation from './components/AppNavigation'
 import Pokemon from './containers/Pokemon'
 import About from './containers/About'
+import Words from './containers/Words'
 import './index.scss'
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/pokemon" element={<Pokemon />} />
+          <Route path="/words" element={<Words />} />
         </Routes>
       </div>
     </div>
