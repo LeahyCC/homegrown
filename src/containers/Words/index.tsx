@@ -3,8 +3,14 @@ import InnerPageWrapper from '../../components/InnerPageWrapper'
 // import Word from './word'
 import words from 'an-array-of-english-words'
 
+/**
+ * Purpose of these scenarios:
+ * Test the most prominent "bottle necks"
+ * of state usage and some hooks.
+ */
+
 const Words = () => {
-  const [wordsState] = useState<string[]>(words)
+  // const [wordsState] = useState<string[]>(words)
   const [amountOfWords, setAmountOfWords] = useState(10)
 
   const listWrap = document.getElementById('js__list-wrapper')
@@ -19,14 +25,14 @@ const Words = () => {
 
   return (
     <InnerPageWrapper>
-      {amountOfWords} of {wordsState.length} rendered
+      {amountOfWords} of {words.length} rendered
       <br />
       <br />
       <input
         onChange={(e) => setAmountOfWords(Number(e.target.value))}
         type="range"
         min="1"
-        max={wordsState.length}
+        max={words.length}
         value={amountOfWords}
         style={{ width: '100%' }}
       />
@@ -42,11 +48,7 @@ const Words = () => {
           overflow: 'scroll',
         }}
       >
-        {wordsState.slice(0, amountOfWords).map((word) => {
-          /**
-           * only for testing rerenders
-           * whats the most prominent "bottle neck"
-           */
+        {words.slice(0, amountOfWords).map((word) => {
           // return <Word key={word} word={word} />
           return <li key={word}>{word}</li>
         })}
