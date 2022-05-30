@@ -1,9 +1,9 @@
 import { MdCatchingPokemon, MdStickyNote2 } from 'react-icons/md'
 import { HiOutlineCode } from 'react-icons/hi'
 
-import Pokemon from '../../containers/Pokemon'
-import About from '../../containers/About'
-import Words from '../../containers/Words'
+import Pokemon from '@/containers/Pokemon'
+import About from '@/containers/About'
+import Words from '@/containers/Words'
 
 export type navItem = {
   to: string

@@ -1,4 +1,4 @@
-import InnerPageContainer from '../../components/InnerPageWrapper'
+import InnerPageContainer from '@/components/InnerPageWrapper'
 
 const About = () => {
   return (

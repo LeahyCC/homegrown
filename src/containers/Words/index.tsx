@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from 'react'
-import InnerPageWrapper from '../../components/InnerPageWrapper'
+import InnerPageWrapper from '@/components/InnerPageWrapper'
 import WordsSearch from './WordsSearch'
 import words from 'an-array-of-english-words'
 

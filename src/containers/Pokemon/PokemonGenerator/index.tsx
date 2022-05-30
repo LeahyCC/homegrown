@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useGetPokemonListQuery } from '../../../redux/services/pokemon'
-import LoadingSpinner from '../../../components/LoadingSpinner'
+import { useGetPokemonListQuery } from '@/redux/services/pokemon'
+import LoadingSpinner from '@/components/LoadingSpinner'
 import noImageFound from './noimagefound.jpg'
 import './index.scss'
 
