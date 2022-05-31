@@ -7,6 +7,7 @@ import AppNavigation from './components/AppNavigation'
 import Pokemon from '@/containers/Pokemon'
 import About from '@/containers/About'
 import StarWars from '@/containers/StarWars'
+import GraphQLC from '@/containers/GraphQLC'
 // import Words from '@/containers/Words'
 const Words = lazy(() => import('@/containers/Words'))
 
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/pokemon" element={<Pokemon />} />
             <Route path="/words" element={<Words />} />
             <Route path="/star-wars" element={<StarWars />} />
+            <Route path="/graphql" element={<GraphQLC />} />
           </Routes>
         </Suspense>
       </div>
