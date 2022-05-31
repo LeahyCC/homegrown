@@ -1,9 +1,6 @@
 import { MdCatchingPokemon, MdStickyNote2 } from 'react-icons/md'
 import { HiOutlineCode } from 'react-icons/hi'
-
-import Pokemon from '@/containers/Pokemon'
-import About from '@/containers/About'
-import Words from '@/containers/Words'
+import { GiInterceptorShip } from 'react-icons/gi'
 
 export type navItem = {
   to: string
@@ -11,35 +8,25 @@ export type navItem = {
   title: string
 }
 
-export const navURLS = {
-  about: {
-    url: '/',
-    component: About,
-  },
-  pokemon: {
-    url: '/pokemon',
-    component: Pokemon,
-  },
-  words: {
-    url: '/words',
-    component: Words,
-  },
-}
-
-export const itemList: navItem[] = [
+export const navList: navItem[] = [
   {
-    to: navURLS.about.url,
+    to: '/',
     icon: HiOutlineCode({ size: '100%' }),
     title: 'About',
   },
   {
-    to: navURLS.pokemon.url,
+    to: '/pokemon',
     icon: MdCatchingPokemon({ size: '100%' }),
     title: 'Pokemon',
   },
   {
-    to: navURLS.words.url,
+    to: '/words',
     icon: MdStickyNote2({ size: '100%' }),
     title: 'Words',
+  },
+  {
+    to: '/star-wars',
+    icon: GiInterceptorShip({ size: '100%' }),
+    title: 'StarWars',
   },
 ]

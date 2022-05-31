@@ -7,12 +7,16 @@ import words from 'an-array-of-english-words'
  * Purpose of these scenarios:
  * Test the most prominent "bottle necks"
  * of state usage and some hooks.
+ *
+ * lazy() in conjunction with Suspense to load this page
+ * to see effects of NUMBER_OF_RENDERED_WORDS
  */
+
+const NUMBER_OF_RENDERED_WORDS = 100000
 
 const Words = () => {
   // const [wordsState] = useState<string[]>(words)
-  // exceeding 5000 will cause stack to implode a bit
-  const [amountOfWords, setAmountOfWords] = useState(0)
+  const [amountOfWords, setAmountOfWords] = useState(NUMBER_OF_RENDERED_WORDS)
 
   const listWrap = document.getElementById('js__list-wrapper')
   useLayoutEffect(() => {

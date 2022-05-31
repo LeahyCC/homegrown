@@ -1,22 +1,22 @@
 import { Link, useLocation } from 'react-router-dom'
 import { DiAtom } from 'react-icons/di'
-import { itemList } from './AppNavigationList'
+import { navList } from './AppNavigationList'
 import './stylesAppNavigationList.scss'
 
 export const AppNavigation = () => {
   const navItems = () => {
     const location = useLocation()
 
-    return itemList.map((item) => {
-      const activeLink = location.pathname === item.to
+    return navList.map((navItem) => {
+      const activeLink = location.pathname === navItem.to
       return (
         <Link
           className={activeLink ? 'nav__item nav__item--active' : 'nav__item'}
-          to={item.to}
-          key={item.title}
+          to={navItem.to}
+          key={navItem.title}
         >
-          <div className="nav__item-icon">{item.icon}</div>
-          <div className="nav__item-title">{item.title}</div>
+          <div className="nav__item-icon">{navItem.icon}</div>
+          <div className="nav__item-title">{navItem.title}</div>
         </Link>
       )
     })
