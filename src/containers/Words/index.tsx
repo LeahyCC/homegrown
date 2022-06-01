@@ -12,7 +12,7 @@ import words from 'an-array-of-english-words'
  * to see effects of NUMBER_OF_RENDERED_WORDS
  */
 
-const NUMBER_OF_RENDERED_WORDS = 100000
+const NUMBER_OF_RENDERED_WORDS = 10
 
 const Words = () => {
   // const [wordsState] = useState<string[]>(words)

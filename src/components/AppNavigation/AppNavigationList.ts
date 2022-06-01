@@ -2,6 +2,7 @@ import { MdCatchingPokemon, MdStickyNote2 } from 'react-icons/md'
 import { HiOutlineCode } from 'react-icons/hi'
 import { GiInterceptorShip } from 'react-icons/gi'
 import { GrGraphQl } from 'react-icons/gr'
+import { AiOutlineCode } from 'react-icons/ai'
 
 export type navItem = {
   to: string
@@ -34,5 +35,10 @@ export const navList: navItem[] = [
     to: '/graphql',
     icon: GrGraphQl({ size: '100%' }),
     title: 'GraphQL',
+  },
+  {
+    to: '/coding',
+    icon: AiOutlineCode({ size: '100%' }),
+    title: 'Coding',
   },
 ]

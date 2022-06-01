@@ -8,6 +8,7 @@ import Pokemon from '@/containers/Pokemon'
 import About from '@/containers/About'
 import StarWars from '@/containers/StarWars'
 import GraphQLC from '@/containers/GraphQLC'
+import Coding from '@/containers/Coding'
 // import Words from '@/containers/Words'
 const Words = lazy(() => import('@/containers/Words'))
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/words" element={<Words />} />
             <Route path="/star-wars" element={<StarWars />} />
             <Route path="/graphql" element={<GraphQLC />} />
+            <Route path="/coding" element={<Coding />} />
           </Routes>
         </Suspense>
       </div>
