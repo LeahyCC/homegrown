@@ -15,6 +15,7 @@
     "@favware/graphql-pokemon": "^6.5.11",
     "an-array-of-english-words": "^2.0.0",
     "apollo-boost": "^0.4.9",
+    "classnames": "^2.3.1",
     "graphql-tag": "^2.12.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
