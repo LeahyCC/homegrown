@@ -23,17 +23,6 @@ const About = () => {
       Y: {pointer.y}
       <br />
       <br />
-      <img
-        src={nickImg}
-        alt="nick"
-        style={{
-          position: 'absolute',
-          left: pointer.x,
-          top: pointer.y,
-          height: '150px',
-          width: '150px',
-        }}
-      />
       <div
         style={{
           borderRadius: '3px',
@@ -41,7 +30,19 @@ const About = () => {
           height: '80vh',
         }}
         ref={mouseWrapRef}
-      />
+      >
+        <img
+          src={nickImg}
+          alt="nick"
+          style={{
+            position: 'absolute',
+            left: pointer.x,
+            top: pointer.y,
+            height: '150px',
+            width: '150px',
+          }}
+        />
+      </div>
     </InnerPageContainer>
   )
 }

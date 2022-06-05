@@ -5,10 +5,12 @@ import InnerPageContainer from '@/components/InnerPageWrapper'
 import LoadingSpinner from '@/components/LoadingSpinner'
 import AppNavigation from './components/AppNavigation'
 import Pokemon from '@/containers/Pokemon'
-import About from '@/containers/About'
+import Cursor from '@/containers/Cursor'
 import StarWars from '@/containers/StarWars'
 import GraphQLC from '@/containers/GraphQLC'
-import Coding from '@/containers/Coding'
+import Hooks from '@/containers/ReactHooks'
+import UseState from '@/containers/ReactHooks/Hooks/UseState'
+
 // import Words from '@/containers/Words'
 const Words = lazy(() => import('@/containers/Words'))
 
@@ -25,12 +27,13 @@ const App = () => {
           }
         >
           <Routes>
-            <Route path="/" element={<About />} />
+            <Route path="/" element={<Cursor />} />
             <Route path="/pokemon" element={<Pokemon />} />
             <Route path="/words" element={<Words />} />
             <Route path="/star-wars" element={<StarWars />} />
             <Route path="/graphql" element={<GraphQLC />} />
-            <Route path="/coding" element={<Coding />} />
+            <Route path="/react-hooks" element={<Hooks />} />
+            <Route path="/react-hooks/useState" element={<UseState />} />
           </Routes>
         </Suspense>
       </div>

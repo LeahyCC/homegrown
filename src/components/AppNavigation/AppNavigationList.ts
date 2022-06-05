@@ -1,8 +1,6 @@
 import { MdCatchingPokemon, MdStickyNote2 } from 'react-icons/md'
-import { HiOutlineCode } from 'react-icons/hi'
-import { GiInterceptorShip } from 'react-icons/gi'
+import { GiInterceptorShip, GiArrowCursor, GiPirateHook } from 'react-icons/gi'
 import { GrGraphQl } from 'react-icons/gr'
-import { AiOutlineCode } from 'react-icons/ai'
 
 export type navItem = {
   to: string
@@ -13,8 +11,8 @@ export type navItem = {
 export const navList: navItem[] = [
   {
     to: '/',
-    icon: HiOutlineCode({ size: '100%' }),
-    title: 'About',
+    icon: GiArrowCursor({ size: '100%' }),
+    title: 'Cursor',
   },
   {
     to: '/pokemon',
@@ -37,8 +35,8 @@ export const navList: navItem[] = [
     title: 'GraphQL',
   },
   {
-    to: '/coding',
-    icon: AiOutlineCode({ size: '100%' }),
-    title: 'Coding',
+    to: '/react-hooks',
+    icon: GiPirateHook({ size: '100%' }),
+    title: 'ReactHooks',
   },
 ]
