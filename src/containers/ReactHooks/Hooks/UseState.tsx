@@ -1,6 +1,8 @@
+import InnerPageWrapper from '@/components/InnerPageWrapper'
+
 const HookUseState = () => {
   return (
-    <div>
+    <InnerPageWrapper>
       React Docs
       <a
         href="https://beta.reactjs.org/apis/usestate"
@@ -9,7 +11,7 @@ const HookUseState = () => {
       >
         - useState
       </a>
-    </div>
+    </InnerPageWrapper>
   )
 }
 export default HookUseState
