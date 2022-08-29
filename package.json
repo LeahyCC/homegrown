@@ -61,5 +61,6 @@
       "eslint -c .eslintrc.yml --fix"
     ],
     "**/*.{js,jsx,ts,tsx,md,html,css,scss}": "prettier --write"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
