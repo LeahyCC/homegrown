@@ -1,6 +1,7 @@
 import { MdCatchingPokemon, MdStickyNote2 } from 'react-icons/md'
 import { GiInterceptorShip, GiArrowCursor, GiPirateHook } from 'react-icons/gi'
 import { GrGraphQl } from 'react-icons/gr'
+import { FaCat } from 'react-icons/fa'
 
 export type navItem = {
   to: string
@@ -38,5 +39,10 @@ export const navList: navItem[] = [
     to: '/react-hooks',
     icon: GiPirateHook({ size: '100%' }),
     title: 'ReactHooks',
+  },
+  {
+    to: '/rerenders',
+    icon: FaCat({ size: '100%' }),
+    title: 'Rerenders',
   },
 ]

@@ -10,6 +10,7 @@ import StarWars from '@/containers/StarWars'
 import GraphQLC from '@/containers/GraphQLC'
 import Hooks from '@/containers/ReactHooks'
 import UseState from '@/containers/ReactHooks/Hooks/UseState'
+import { Rerenders } from '@/containers/Rerenders'
 
 // import Words from '@/containers/Words'
 const Words = lazy(() => import('@/containers/Words'))
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/words" element={<Words />} />
             <Route path="/star-wars" element={<StarWars />} />
             <Route path="/graphql" element={<GraphQLC />} />
+            <Route path="/rerenders" element={<Rerenders />} />
             <Route path="/react-hooks" element={<Hooks />} />
             <Route path="/react-hooks/useState" element={<UseState />} />
           </Routes>
